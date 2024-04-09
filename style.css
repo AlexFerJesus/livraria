@@ -1,15 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 form{
-    margin-top: 50%;
+    margin-top: 10px;
 
 }
 
 body{
-    background-color: #6737ea;
+    background-color: #FCAC0D;
+}
+
+.form.label {
+    color: white;
     
 }
 
 img {
     height: 150px;
     width: 200;
+}
 
+.botao {
+    margin-top: 30px;
+}
+
+.btn {
+    color: white;
+    width: 100%;
+    font-size: 18px;
+}
+
+a {
+    margin-top: 15px;
+}
+
+.user {
+    margin-top: 20%;
+}
+
+.container-form {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex {
+    width: 20%;
+    justify-content: center;
+    align-items: center;
 }
