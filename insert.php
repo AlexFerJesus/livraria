@@ -1,19 +1,14 @@
 <?php
-// $nome = $_POST["nome"];
-// $setor = $_POST["setor"];
-// $login = $_POST["login"];
-// $senha = $_POST["senha"];
+$nome = $_POST["nome"];
+$setor = $_POST["setor"];
+$login = $_POST["login"];
+$senha = $_POST["senha"];
 
-// echo "$nome";
-// echo "<br>";
-// echo "$setor";
-// echo "<br>";
-// echo "$login";
-// echo "<br>";
-// echo "$senha";
-// echo "<br>";
+include 'conexao.php';
 
-print_r($_POST);
+$insert = "INSERT INTO tb_user VALUES (NULL,'$nome','$setor','$login','$senha')";
 
-// SUPERGLOBALS
+$query = mysqli_query($conexao, $insert);
+
+echo "Inserido com Sucesso";
 ?>
