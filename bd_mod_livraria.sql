@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 23-Abr-2024 às 00:57
+-- Tempo de geração: 23-Abr-2024 às 02:18
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 8.2.0
 
@@ -93,6 +93,20 @@ CREATE TABLE `tb_livro` (
   `fk_cd_editora` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `tb_user`
+--
+
+CREATE TABLE `tb_user` (
+  `id_user` int NOT NULL,
+  `nm_usuario` varchar(45) DEFAULT NULL,
+  `login` varchar(45) DEFAULT NULL,
+  `nm_setor` varchar(45) DEFAULT NULL,
+  `senha` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 --
 -- Índices para tabelas despejadas
 --
@@ -132,6 +146,12 @@ ALTER TABLE `tb_livro`
   ADD KEY `fk_cd_editora` (`fk_cd_editora`);
 
 --
+-- Índices para tabela `tb_user`
+--
+ALTER TABLE `tb_user`
+  ADD PRIMARY KEY (`id_user`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -152,6 +172,12 @@ ALTER TABLE `tb_compra`
 --
 ALTER TABLE `tb_editora`
   MODIFY `cd_editora` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `tb_user`
+--
+ALTER TABLE `tb_user`
+  MODIFY `id_user` int NOT NULL AUTO_INCREMENT;
 
 --
 -- Restrições para despejos de tabelas
