@@ -54,3 +54,7 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+.bg {
+    background-color: #b571e2 !important;
+}

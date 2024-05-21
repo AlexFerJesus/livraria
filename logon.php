@@ -18,6 +18,8 @@ $result = mysqli_fetch_array($query);
 $nome_banco = $result['login'];
 $senha_banco = $result['senha'];
 
+
+
 if ($nome == $nome_banco && $senha == $senha_banco)
 {
     header('location: C_cliente.html');

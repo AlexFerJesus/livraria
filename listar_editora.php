@@ -39,28 +39,34 @@
           </div>
         </div>
         </nav>
-        <h2>Listar Usuario</h2>
+        <h2>Listar Editora</h2>
 
 <table class="table">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Setor</th>
-      <th scope="col">Login</th>
+      <th scope="col">Editora</th>
+      <th scope="col">Endereço</th>
+      <th scope="col">Numero do endereço</th>
+      <th scope="col">Bairro</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Gerente</th>
     </tr>
   </thead>
   <tbody>
         <?php
     include 'conexao.php';
-    $select = "SELECT * FROM tb_user";
+    $select = "SELECT * FROM tb_editora";
     $query = mysqli_query($conexao,$select);
     while ($result =  mysqli_fetch_array($query)) { ?>
 <tr>
-      <td scope="row"><?php echo $result['id_user']; ?></td>
-      <td> <?php echo $result['nm_usuario']; ?></td>
-      <td><?php echo $result['nm_setor']; ?></td>
-      <td><?php echo $result['login']; ?></td>
+      <td scope="row"><?php echo $result['cd_editora']; ?></td>
+      <td> <?php echo $result['nm_editora']; ?></td>
+      <td><?php echo $result['nm_endereco']; ?></td>
+      <td><?php echo $result['nr_endereco']; ?></td>
+      <td><?php echo $result['nm_bairro']; ?></td>
+      <td><?php echo $result['nr_telefone']; ?></td>
+      <td><?php echo $result['nm_gerente']; ?></td>
     </tr>
 
 <?php } ?>  
