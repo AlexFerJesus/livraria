@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+button {
+    outline: none;
+    border: none;
+}
+
+
+#raiz td:nth-child(5) {
+    display: flex !important	;
+}
+
+.row {
+    display: flex !important;
+    background: #000;
+}
+
 form{
     margin-top: 100px;
 
@@ -15,7 +30,6 @@ body{
 
 .form.label {
     color: white;
-    
 }
 
 img {
@@ -56,5 +70,5 @@ a {
 }
 
 .bg {
-    background-color: #b571e2 !important;
+    background-color: #587fec !important;
 }

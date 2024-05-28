@@ -48,6 +48,7 @@
       <th scope="col">Nome</th>
       <th scope="col">Setor</th>
       <th scope="col">Login</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -56,11 +57,16 @@
     $select = "SELECT * FROM tb_user";
     $query = mysqli_query($conexao,$select);
     while ($result =  mysqli_fetch_array($query)) { ?>
-<tr>
-      <td scope="row"><?php echo $result['id_user']; ?></td>
+    <tr class="raiz">
+      <td scope="row"><?= $result['id_user']; ?></td>
       <td> <?php echo $result['nm_usuario']; ?></td>
       <td><?php echo $result['nm_setor']; ?></td>
-      <td><?php echo $result['login']; ?></td>
+      <td><?php echo $result['login']; ?>
+      <td  class="row">
+          <a href="show.php?id=<?= $result['id_user'] ?>" class=" fas fa-eye check-ico"></a>
+          <a href="edite_user.php?id=<?= $result['id_user'] ?>" class="far fa-edit edit-ico"></a>
+      </td>
+       
     </tr>
 
 <?php } ?>  

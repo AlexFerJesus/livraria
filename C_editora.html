@@ -22,7 +22,7 @@
                 <a class="nav-link" aria-current="page" href="./C_cliente.html">Cad.Cliente</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./cadastro.html ">Cad.Editora</a>
+                <a class="nav-link active" aria-current="page" href="./C_editora.html ">Cad.Editora</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="./listar_cliente.php">Relat.Clientes</a>
@@ -38,5 +38,36 @@
           </div>
         </div>
         </nav>
+
+        <div class="container-form text-center">
+          <div class="flex">
+              <form class="user" action="insert_editora.php" method="post">
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"><strong>Nome Editora</strong></label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" name="nomeE">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"><strong>Endereço</strong></label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" name="endereçoE">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"><strong>Numero do endereço</strong></label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" name="nrendereçoE">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label"><strong>Bairro<strong></label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" name="bairroE">
+                  </div>
+                  <div class="mb-3">
+                      <label for="exampleInputPassword1"><strong>Telefone<strong></label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" name="telefoneE">
+                    </div>
+                  <div class="mb-3">
+                      <label for="exampleInputEmail1"><strong>Gerente<strong></label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" name="gerente">
+                  </div>
+                  <div class="botao">
+                    <button type="submit" class="btn btn-primary"><strong>Cadastrar</strong></button>
+                  </div>
 </body>
 </html>
